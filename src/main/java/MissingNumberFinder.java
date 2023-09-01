@@ -4,14 +4,14 @@ import java.util.Set;
 public class MissingNumberFinder {
     public static int findMissingNumber(int[] nums) {
         // Проверяю на пустой массив
-        if (nums.length == 0) {
+        if (nums.length == 0) { //массив с 1 элементом так же является массивом без пропущенного числа
             return -1;
         }
 
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        Set<Integer> numSet = new HashSet<>();
-
+        Set<Integer> numSet = new HashSet<>(); 
+        
         // Нахожу минимальное и максимальное значение в массиве,
         // а также использую HashSet для быстрой проверки наличия чисел
         for (int num : nums) {
